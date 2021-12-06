@@ -1,0 +1,23 @@
+{
+  "name": "squidgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wortzzzzz/SquidGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wortzzzzz/SquidGame/issues"
+  },
+  "homepage": "https://github.com/Wortzzzzz/SquidGame#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
