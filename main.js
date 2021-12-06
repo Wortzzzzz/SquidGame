@@ -7,8 +7,8 @@ document.body.appendChild( renderer.domElement );
 
 /*---------------------------Light----------------------------*/
 renderer.setClearColor( 0xb7c3f3, 1 );
-
-
+const bgMusic = new Audio('/music_bg.mp3')
+bgMusic.loop = true 
 const light = new THREE.AmbientLight( 0xffffff ); // soft white light
 scene.add( light );
 
@@ -58,14 +58,14 @@ function delay(ms){
 class Doll{
     constructor() {
         const loader = new THREE.GLTFLoader();
-        loader.load("../modells/scene.gltf", (gltf) => {
+        loader.load("/modells/scene.gltf", (gltf) => {
             scene.add( gltf.scene);
             
             gltf.scene.scale.set(.3, .3, .3);
             gltf.scene.position.set(0, -1, 0);
             this.doll = gltf.scene;
         })
-    }
+    }   
 
 
     lookBackward(){
@@ -166,6 +166,7 @@ async function init(){
     text.innerText = "Starting in 1"
     await delay(1000)
     text.innerText = "GO!"
+    bgMusic.play()
     startGame()
 }
 
